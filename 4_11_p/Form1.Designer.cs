@@ -33,14 +33,14 @@ namespace _4_11_p
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textbox_targetIP = new System.Windows.Forms.TextBox();
+            this.textBox_targetPort = new System.Windows.Forms.TextBox();
+            this.textBox_port = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(680, 74);
+            this.button1.Location = new System.Drawing.Point(672, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -51,59 +51,59 @@ namespace _4_11_p
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 78);
+            this.label1.Location = new System.Drawing.Point(56, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 12);
+            this.label1.Size = new System.Drawing.Size(39, 12);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "目標IP";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(289, 78);
+            this.label2.Location = new System.Drawing.Point(266, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 12);
+            this.label2.Size = new System.Drawing.Size(48, 12);
             this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.label2.Text = "目標Port";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(495, 78);
+            this.label3.Location = new System.Drawing.Point(487, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 12);
+            this.label3.Size = new System.Drawing.Size(48, 12);
             this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
+            this.label3.Text = "接收port";
             // 
-            // textBox1
+            // textbox_targetIP
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
+            this.textbox_targetIP.Location = new System.Drawing.Point(95, 33);
+            this.textbox_targetIP.Name = "textbox_targetIP";
+            this.textbox_targetIP.Size = new System.Drawing.Size(100, 22);
+            this.textbox_targetIP.TabIndex = 4;
             // 
-            // textBox2
+            // textBox_targetPort
             // 
-            this.textBox2.Location = new System.Drawing.Point(328, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
+            this.textBox_targetPort.Location = new System.Drawing.Point(320, 32);
+            this.textBox_targetPort.Name = "textBox_targetPort";
+            this.textBox_targetPort.Size = new System.Drawing.Size(100, 22);
+            this.textBox_targetPort.TabIndex = 5;
             // 
-            // textBox3
+            // textBox_port
             // 
-            this.textBox3.Location = new System.Drawing.Point(534, 75);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 6;
+            this.textBox_port.Location = new System.Drawing.Point(541, 32);
+            this.textBox_port.Name = "textBox_port";
+            this.textBox_port.Size = new System.Drawing.Size(100, 22);
+            this.textBox_port.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_port);
+            this.Controls.Add(this.textBox_targetPort);
+            this.Controls.Add(this.textbox_targetIP);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -112,6 +112,9 @@ namespace _4_11_p
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,9 +126,9 @@ namespace _4_11_p
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textbox_targetIP;
+        private System.Windows.Forms.TextBox textBox_targetPort;
+        private System.Windows.Forms.TextBox textBox_port;
     }
 }
 
