@@ -36,6 +36,11 @@ namespace _4_11_p
             this.textbox_targetIP = new System.Windows.Forms.TextBox();
             this.textBox_targetPort = new System.Windows.Forms.TextBox();
             this.textBox_port = new System.Windows.Forms.TextBox();
+            this.RedBtn = new System.Windows.Forms.RadioButton();
+            this.GreenBtn = new System.Windows.Forms.RadioButton();
+            this.BlueBtn = new System.Windows.Forms.RadioButton();
+            this.BlackBtn = new System.Windows.Forms.RadioButton();
+            this.WhiteBtn = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // button1
@@ -96,11 +101,71 @@ namespace _4_11_p
             this.textBox_port.Size = new System.Drawing.Size(100, 22);
             this.textBox_port.TabIndex = 6;
             // 
+            // RedBtn
+            // 
+            this.RedBtn.AutoSize = true;
+            this.RedBtn.Location = new System.Drawing.Point(753, 115);
+            this.RedBtn.Name = "RedBtn";
+            this.RedBtn.Size = new System.Drawing.Size(35, 16);
+            this.RedBtn.TabIndex = 7;
+            this.RedBtn.TabStop = true;
+            this.RedBtn.Text = "紅";
+            this.RedBtn.UseVisualStyleBackColor = true;
+            // 
+            // GreenBtn
+            // 
+            this.GreenBtn.AutoSize = true;
+            this.GreenBtn.Location = new System.Drawing.Point(753, 147);
+            this.GreenBtn.Name = "GreenBtn";
+            this.GreenBtn.Size = new System.Drawing.Size(35, 16);
+            this.GreenBtn.TabIndex = 8;
+            this.GreenBtn.TabStop = true;
+            this.GreenBtn.Text = "綠";
+            this.GreenBtn.UseVisualStyleBackColor = true;
+            // 
+            // BlueBtn
+            // 
+            this.BlueBtn.AutoSize = true;
+            this.BlueBtn.Location = new System.Drawing.Point(753, 179);
+            this.BlueBtn.Name = "BlueBtn";
+            this.BlueBtn.Size = new System.Drawing.Size(35, 16);
+            this.BlueBtn.TabIndex = 9;
+            this.BlueBtn.TabStop = true;
+            this.BlueBtn.Text = "藍";
+            this.BlueBtn.UseVisualStyleBackColor = true;
+            // 
+            // BlackBtn
+            // 
+            this.BlackBtn.AutoSize = true;
+            this.BlackBtn.Location = new System.Drawing.Point(753, 211);
+            this.BlackBtn.Name = "BlackBtn";
+            this.BlackBtn.Size = new System.Drawing.Size(35, 16);
+            this.BlackBtn.TabIndex = 10;
+            this.BlackBtn.TabStop = true;
+            this.BlackBtn.Text = "黑";
+            this.BlackBtn.UseVisualStyleBackColor = true;
+            // 
+            // WhiteBtn
+            // 
+            this.WhiteBtn.AutoSize = true;
+            this.WhiteBtn.Location = new System.Drawing.Point(753, 243);
+            this.WhiteBtn.Name = "WhiteBtn";
+            this.WhiteBtn.Size = new System.Drawing.Size(35, 16);
+            this.WhiteBtn.TabIndex = 11;
+            this.WhiteBtn.TabStop = true;
+            this.WhiteBtn.Text = "白";
+            this.WhiteBtn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.WhiteBtn);
+            this.Controls.Add(this.BlackBtn);
+            this.Controls.Add(this.BlueBtn);
+            this.Controls.Add(this.GreenBtn);
+            this.Controls.Add(this.RedBtn);
             this.Controls.Add(this.textBox_port);
             this.Controls.Add(this.textBox_targetPort);
             this.Controls.Add(this.textbox_targetIP);
@@ -129,6 +194,11 @@ namespace _4_11_p
         private System.Windows.Forms.TextBox textbox_targetIP;
         private System.Windows.Forms.TextBox textBox_targetPort;
         private System.Windows.Forms.TextBox textBox_port;
+        private System.Windows.Forms.RadioButton RedBtn;
+        private System.Windows.Forms.RadioButton GreenBtn;
+        private System.Windows.Forms.RadioButton BlueBtn;
+        private System.Windows.Forms.RadioButton BlackBtn;
+        private System.Windows.Forms.RadioButton WhiteBtn;
     }
 }
 

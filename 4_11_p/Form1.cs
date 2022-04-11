@@ -39,7 +39,8 @@ namespace _4_11_p
                 {
                     byte[] B = U.Receive(ref EP);
                     string A = Encoding.Default.GetString(B);
-                    string[] Q = A.Split('/');
+                    string[] Z = A.Split('_');
+                    string[] Q = Z[1].Split('/');
                     Point[] R = new Point[Q.Length];
                     for(int i =0;i<Q.Length;i++)
                     {
@@ -54,6 +55,25 @@ namespace _4_11_p
                         L.StartPoint = R[i];
                         L.EndPoint = R[i + 1];
                         L.Parent = D;
+
+                        switch(Z[0])
+                        {
+                            case "1":
+                                L.BorderColor = Color.Red;
+                                break;
+                            case "2":
+                                L.BorderColor = Color.Green;
+                                break;
+                            case "3":
+                                L.BorderColor = Color.Blue;
+                                break;
+                            case "4":
+                                L.BorderColor = Color.Black;
+                                break;
+                            case "5":
+                                L.BorderColor = Color.White;
+                                break;
+                        }
                     }
                 }
             }
@@ -104,6 +124,11 @@ namespace _4_11_p
                 LineShape L = new LineShape();
                 L.StartPoint = StartP;
                 L.EndPoint = e.Location;
+                if (RedBtn.Checked) { L.BorderColor = Color.Red; }
+                if (GreenBtn.Checked) { L.BorderColor = Color.Green; }
+                if (BlueBtn.Checked) { L.BorderColor = Color.Blue; }
+                if (BlackBtn.Checked) { L.BorderColor = Color.Black; }
+                if (WhiteBtn.Checked) { L.BorderColor = Color.White; }
                 L.Parent = C;
                 StartP = e.Location;
                 p += "/" + StartP.X.ToString() + "," + StartP.Y.ToString();
@@ -113,6 +138,11 @@ namespace _4_11_p
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
             int port = int.Parse(textBox_targetPort.Text);
+            if (RedBtn.Checked) { p="1_"+p; }
+            if (GreenBtn.Checked) { p = "2_" + p; }
+            if (BlueBtn.Checked) { p = "3_" + p; }
+            if (BlackBtn.Checked) { p = "4_" + p; }
+            if (WhiteBtn.Checked) { p = "5_" + p; }
             byte[] B = Encoding.Default.GetBytes(p);
             UdpClient S = new UdpClient(textbox_targetIP.Text,port);
             S.Send(B, B.Length);
